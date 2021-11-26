@@ -35,10 +35,9 @@ function getColor(index, mode, useMode) {
     }
     return colors.white;
 }
-import { inject, observer } from 'mobx-react'
 
-@inject("store")
-@observer
+
+
 export default class PackageListItem extends Component {
     constructor(props) {
         super(props);
@@ -78,14 +77,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row'
     },
     cellText1: {
-        fontSize: size.font_18,
+        fontSize: size.font_16,
         color: colors.black,
-        fontFamily: type.medium
+        fontFamily: type.bold2
     },
     cellText2: {
         fontSize: size.font_18,
         color: colors.white,
-        fontFamily: type.bold
+        fontFamily: type.medium
     },
     cell: {
         flex: 1,

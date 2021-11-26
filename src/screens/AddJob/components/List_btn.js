@@ -9,10 +9,9 @@ import {
 import { size, type, weight } from '../../../res/fonts';
 import metrics from '../../../res/metrics';
 import colors from '../../../res/colors';
-import { inject, observer } from 'mobx-react'
 
-@inject("store")
-@observer
+
+
 export default class List_btn extends Component {
   constructor(props) {
     super(props);
@@ -44,8 +43,8 @@ const styles = StyleSheet.create({
     marginVertical: size.font_9,
   },
   btnText:{
-    fontSize:size.font_20,
-    fontFamily: type.bold,
+    fontSize:size.font_18,
+    fontFamily: type.medium,
     color:colors.white
   }
 })

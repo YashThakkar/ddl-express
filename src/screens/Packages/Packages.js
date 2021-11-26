@@ -17,12 +17,11 @@ import metrics from '../../res/metrics';
 import colors from '../../res/colors';
 import PackageListItem from '../../Components/PakagesListItem';
 import constants from '../../res/constants';
-import { inject, observer } from 'mobx-react'
+
 import List_btn from './components/List_btn';
 import ActionModal from './components/ActionModal';
 
-@inject("store")
-@observer
+
 export default class Packages extends Component {
   constructor(props) {
     super(props);
@@ -71,7 +70,7 @@ export default class Packages extends Component {
           />
         </View>
         <View style={styles.btn}>
-          <List_btn onClickBtn={() => this.setState({ isModalVisible: true })} data={{ title: "Load completed", color: colors.gray_light, inActive: false }} />
+          <List_btn onClickBtn={() => this.setState({ isModalVisible: true })} data={{ title: "Load Completed", color: colors.gray_light, inActive: false }} />
         </View>
       </View>
     )

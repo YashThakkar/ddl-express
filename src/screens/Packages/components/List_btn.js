@@ -15,10 +15,9 @@ import {
 import { size, type, weight } from '../../../res/fonts';
 import metrics from '../../../res/metrics';
 import colors from '../../../res/colors';
-import { inject, observer } from 'mobx-react'
 
-@inject("store")
-@observer
+
+
 export default class List_btn extends Component {
   constructor(props) {
     super(props);
@@ -32,7 +31,7 @@ export default class List_btn extends Component {
       <TouchableOpacity disabled={data.inActive} onPress={() => { this.props.onClickBtn(data.title) }} >
         <View style={[styles.containerStyle,{backgroundColor:data.color,opacity:(data.inActive?0.6:1)}]}>
           <Text style={styles.btnText}>
-            {data.title.toUpperCase()}
+            {data.title}
           </Text>
         </View>
       </TouchableOpacity>
@@ -50,8 +49,8 @@ const styles = StyleSheet.create({
     marginVertical: size.font_9,
   },
   btnText:{
-    fontSize:size.font_18,
-    fontFamily: type.bold,
+    fontSize:size.font_16,
+    fontFamily: type.bold2,
     color:colors.black,
   }
 })

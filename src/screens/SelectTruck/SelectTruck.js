@@ -15,10 +15,9 @@ import { size, type, weight } from '../../res/fonts';
 import metrics from '../../res/metrics';
 import colors from '../../res/colors';
 import List_btn from './components/List_btn';
-import { inject, observer } from 'mobx-react'
 
-@inject("store")
-@observer
+
+
 export default class SelectTruck extends Component {
   constructor(props) {
     super(props);

@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
 import {
-    SafeAreaView,
-    ScrollView,
-    StatusBar,
     StyleSheet,
-    Text,
-    useColorScheme,
     View,
 } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { inject, observer } from 'mobx-react'
+
 import Home from './screens/Home/Home';
 import SelectTruck from './screens/SelectTruck/SelectTruck';
 import Packages from './screens/Packages/Packages';
@@ -22,12 +17,16 @@ import CheckTruck from './screens/CheckTruck/CheckTruck';
 
 
 
-const LoginStack = createStackNavigator();
 const HomeStack = createStackNavigator();
 
 
 const HomeStackScreen = () =>
     <HomeStack.Navigator>
+        <HomeStack.Screen
+            name="Login"
+            component={Login}
+            options={{ headerShown: false }}
+        />
         <HomeStack.Screen
             name="Home"
             component={Home}
@@ -60,50 +59,23 @@ const HomeStackScreen = () =>
         />
     </HomeStack.Navigator>
 
-const LoginStackScreen = () =>
-
-    <LoginStack.Navigator>
 
 
-        <LoginStack.Screen
-            name="Login"
-            component={Login}
-            options={{ headerShown: false }}
-        />
-    </LoginStack.Navigator>
 
-@inject("store")
-@observer
 export default class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            loggedIn: this.props.store.loggedIn,
-            splash:false
         }
     }
 
-    showModal = () => {
-        setTimeout(() => {
-            this.setState({
-                splash: false,
-            });
-        }, 2000);
-    };
 
     render() {
-        if (this.state.splash) {
-            return (
-                <View/>
-            )
-        }
-        else {
-            return (
-                <NavigationContainer>
-                    {this.props.store.loggedIn ? <HomeStackScreen /> : <LoginStackScreen />}
-                </NavigationContainer>
-            )
-        }
+        return (
+            <NavigationContainer>
+                <HomeStackScreen />
+            </NavigationContainer>
+        )
     }
 }
 

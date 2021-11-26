@@ -22,10 +22,9 @@ const data = [
     { label: 'User', value: 'User' },
 ];
 
-import { inject, observer } from 'mobx-react'
 
-@inject("store")
-@observer
+
+
 export default class Login extends Component {
     constructor(props) {
         super(props);
@@ -35,7 +34,7 @@ export default class Login extends Component {
     }
 
     onClickBtn = (val) => {
-        this.props.store.login((this.state.value == "Admin"))
+        this.props.navigation.navigate('Home');
     }
 
     render() {
@@ -51,7 +50,7 @@ export default class Login extends Component {
                             data={data}
                             labelField="label"
                             valueField="value"
-                            placeholder="Select Driver"
+                            placeholder="Employee"
                             searchPlaceholder=""
                             value={this.state.value}
                             onChange={item => {
@@ -111,7 +110,8 @@ const styles = StyleSheet.create({
     btn: {
         height: metrics.screenHeight * 0.05,
         marginTop: '30%',
-        width: '100%',
+        marginHorizontal:'8%',
+        width: '90%',
         alignSelf: 'center'
     },
 

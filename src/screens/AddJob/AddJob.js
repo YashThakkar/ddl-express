@@ -27,10 +27,9 @@ const data = [
   { label: 'Item 7', value: '7' },
   { label: 'Item 8', value: '8' },
 ];
-import { inject, observer } from 'mobx-react'
 
-@inject("store")
-@observer
+
+
 export default class AddJob extends Component {
   constructor(props) {
     super(props);
@@ -53,7 +52,7 @@ export default class AddJob extends Component {
             </View>
           </View>
           <View>
-            <Text style={styles.nameTxt} >Name : ABC</Text>
+            <Text style={styles.nameTxt} >IPC</Text>
           </View>
           <View>
             <PackageListItem onClickBtn={this.onClickBtn} data={constants.packageHeader[0]} index={0} useMode={false} />
@@ -132,11 +131,11 @@ const styles = StyleSheet.create({
 
   },
   nameTxt: {
-    fontFamily: type.regular,
+    fontFamily: type.bold,
     marginBottom: size.font_16,
-    marginLeft: size.font_16,
-    color: colors.black,
-    fontSize: size.font_14,
+    color: colors.header,
+    fontSize: size.font_24,
+    alignSelf:'center'
   },
   btn: {
     width: '60%',
@@ -152,10 +151,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   label: {
-    fontFamily: type.medium,
     flex: 0.5,
     color: colors.black,
     fontSize: size.font_16,
+    fontFamily: type.bold,
   },
   inputBox: {
     fontFamily: type.regular,

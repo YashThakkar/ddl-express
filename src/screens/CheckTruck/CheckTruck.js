@@ -23,10 +23,9 @@ import constants from '../../res/constants';
 
 
 
-import { inject, observer } from 'mobx-react'
 
-@inject("store")
-@observer
+
+
 export default class CheckTruck extends Component {
   constructor(props) {
     super(props);
@@ -58,7 +57,7 @@ export default class CheckTruck extends Component {
             </View>
             <View style={styles.input}>
               <Text style={styles.label}>
-               GENERAL REMARKS
+               {"GENERAL\nREMARKS"}
               </Text>
               <TextInput style={styles.inputBox} value={''} />
             </View>
@@ -125,8 +124,8 @@ const styles = StyleSheet.create({
   label: {
     flex: 0.5,
     color: colors.black,
-    fontSize: size.font_16,
-    fontFamily: type.medium,
+    fontSize: size.font_14,
+    fontFamily: type.bold2,
   },
   inputBox: {
     flex: 0.5,

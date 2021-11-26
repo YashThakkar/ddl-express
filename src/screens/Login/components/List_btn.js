@@ -11,15 +11,14 @@ import {
   TouchableOpacity,
   Button
 } from 'react-native';
-import { inject, observer } from 'mobx-react'
+
 
 
 import { size, weight,type } from '../../../res/fonts';
 import metrics from '../../../res/metrics';
 import colors from '../../../res/colors';
 
-@inject("store")
-@observer
+
 export default class List_btn extends Component {
   constructor(props) {
     super(props);
@@ -51,8 +50,8 @@ const styles = StyleSheet.create({
     marginVertical: size.font_9,
   },
   btnText:{
-    fontSize:size.font_30,
+    fontSize:size.font_32,
     color:colors.white,
-    fontFamily: type.medium,
+    fontFamily: type.regular2,
   }
 })

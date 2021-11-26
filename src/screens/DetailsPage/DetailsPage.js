@@ -20,10 +20,9 @@ import List_btn from './components/List_btn';
 import PackageListItem from '../../Components/PakagesListItem';
 import constants from '../../res/constants';
 import ActionModal from './components/ActionModal';
-import { inject, observer } from 'mobx-react'
 
-@inject("store")
-@observer
+
+
 export default class DetailsPage extends Component {
   constructor(props) {
     super(props);
@@ -56,7 +55,7 @@ export default class DetailsPage extends Component {
             </View>
           </View>
           <View>
-            <Text style={styles.nameTxt} >Name : ABC</Text>
+            <Text style={styles.nameTxt} >IPC</Text>
           </View>
           <View>
             <PackageListItem onClickBtn={() => { }} data={constants.packageHeader[0]} index={0} useMode={false} />
@@ -133,11 +132,11 @@ const styles = StyleSheet.create({
 
   },
   nameTxt: {
+    fontFamily: type.bold,
     marginBottom: size.font_16,
-    marginLeft: size.font_16,
-    color: colors.black,
-    fontSize: size.font_14,
-    fontFamily: type.regular,
+    color: colors.header,
+    fontSize: size.font_24,
+    alignSelf: 'center'
   },
   btn: {
     flex: 1,
@@ -156,7 +155,7 @@ const styles = StyleSheet.create({
     flex: 0.5,
     color: colors.black,
     fontSize: size.font_16,
-    fontFamily: type.medium,
+    fontFamily: type.bold,
   },
   inputBox: {
     flex: 0.5,
@@ -164,7 +163,7 @@ const styles = StyleSheet.create({
     color: colors.black,
     fontSize: size.font_16,
     fontFamily: type.regular,
-    backgroundColor:colors.secondary
+    backgroundColor: colors.secondary
   }
 
 })

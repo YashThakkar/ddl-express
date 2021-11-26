@@ -16,10 +16,9 @@ import { size, weight } from '../../../res/fonts';
 import metrics from '../../../res/metrics';
 import colors from '../../../res/colors';
 import List_btn from './List_btn';
-import { inject, observer } from 'mobx-react'
+
 import SignatureCapture from 'react-native-signature-capture';
-@inject("store")
-@observer
+
 export default class ActionModal extends Component {
     constructor(props) {
         super(props);
@@ -96,19 +95,20 @@ const styles = StyleSheet.create({
     },
     label: {
         color: colors.black,
-        fontSize: size.font_16,
+        fontSize: size.font_14,
         fontWeight: weight.bold,
         fontFamily: 'Roboto',
     },
     btn: {
         alignSelf: 'center',
-        width: '50%',
-        width: metrics.screenWidth * 0.55,
+        width: metrics.screenWidth * 0.5,
         height: metrics.screenHeight * 0.03,
         marginBottom: '10%'
 
     },
     signBox: {
-        height: metrics.screenHeight * 0.35,
+        height: metrics.screenHeight * 0.30,
+        marginTop:'2%',
+
     }
 })

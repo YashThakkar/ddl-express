@@ -16,10 +16,9 @@ import { size, weight } from '../../res/fonts';
 import metrics from '../../res/metrics';
 import colors from '../../res/colors';
 import List_btn from './components/List_btn';
-import { inject, observer } from 'mobx-react'
 
-@inject("store")
-@observer
+
+
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -36,7 +35,7 @@ export default class Home extends Component {
     if (val == 4)
       this.props.navigation.navigate("Job");
     if (val == 5)
-      this.props.store.logout();
+      this.props.navigation.navigate('Login')
   }
 
   render() {

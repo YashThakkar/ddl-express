@@ -9,10 +9,9 @@ import {
 import { size, type, weight } from '../../../res/fonts';
 import metrics from '../../../res/metrics';
 import colors from '../../../res/colors';
-import { inject, observer } from 'mobx-react'
 
-@inject("store")
-@observer
+
+
 export default class List_btn extends Component {
   constructor(props) {
     super(props);

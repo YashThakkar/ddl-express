@@ -10,15 +10,14 @@ import { size, type, weight } from '../../../res/fonts';
 import metrics from '../../../res/metrics';
 import colors from '../../../res/colors';
 import List_btn from './List_btn';
-import { inject, observer } from 'mobx-react'
+
 import SignatureCapture from 'react-native-signature-capture';
 const data = [
     { label: 'Driver 1', value: 'Driver 1' },
     { label: 'Driver 2', value: 'Driver 2' },
 ];
 
-@inject("store")
-@observer
+
 export default class ActionModal extends Component {
     constructor(props) {
         super(props);
@@ -90,7 +89,7 @@ export default class ActionModal extends Component {
                                 data={data}
                                 labelField="label"
                                 valueField="value"
-                                placeholder="Select Driver"
+                                placeholder="Driver List Dropdown"
                                 searchPlaceholder=""
                                 value={this.state.value}
                                 onChange={item => {
@@ -158,7 +157,7 @@ const styles = StyleSheet.create({
     },
     label: {
         color: colors.black,
-        fontSize: size.font_16,
+        fontSize: size.font_14,
         fontFamily: type.bold,
     },
     inputBox: {
@@ -171,13 +170,13 @@ const styles = StyleSheet.create({
     },
     btn: {
         alignSelf: 'center',
-        width: '50%',
-        width: metrics.screenWidth * 0.65,
-        height: metrics.screenHeight * 0.03,
+        width: metrics.screenWidth * 0.5,
+        height: metrics.screenHeight * 0.06,
         marginBottom: '10%'
 
     },
     signBox:{
-        height: metrics.screenHeight * 0.15,
+        height: metrics.screenHeight * 0.14,
+        marginTop:'2%'
     }
 })

@@ -15,10 +15,9 @@ import {
 import { size, type, weight } from '../../../res/fonts';
 import metrics from '../../../res/metrics';
 import colors from '../../../res/colors';
-import { inject, observer } from 'mobx-react'
 
-@inject("store")
-@observer
+
+
 export default class List_btn extends Component {
   constructor(props) {
     super(props);
@@ -52,8 +51,8 @@ const styles = StyleSheet.create({
     borderWidth: size.font_2/2,
   },
   btnText:{
-    fontSize:size.font_18,
-    fontFamily: type.bold,
+    fontSize:size.font_20,
+    fontFamily: type.bold2,
     color:colors.black
   }
 })

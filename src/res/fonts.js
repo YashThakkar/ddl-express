@@ -14,6 +14,7 @@ const size = {
     font_20 : metrics.screenWidth * (20/baseWidth),
     font_24 : metrics.screenWidth * (24/baseWidth),
     font_30 : metrics.screenWidth * (30/baseWidth),
+    font_32 : metrics.screenWidth * (32/baseWidth),
 };
 
 const weight = {
@@ -27,8 +28,10 @@ const weight = {
 const type = {
     light:'Roboto-Light',
     regular:'Roboto-Regular',
-    medium:'Arial-Regular',
-    bold:'Roboto-Bold'
+    medium:'Roboto-Medium',
+    bold:'Roboto-Bold',
+    regular2:'OpenSans-Regular',
+    bold2:'arial-black'
 }
 
 export {
